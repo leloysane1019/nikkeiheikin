@@ -10,7 +10,7 @@ import os
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 
-model = load_model("nikkei_model.keras")
+model = load_model("nikkei_model.h5")
 
 @app.get("/", response_class=HTMLResponse)
 def form_index(request: Request):
